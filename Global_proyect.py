@@ -1,7 +1,7 @@
 import csv
 
 def read_departaments():
-    with open('departments.csv', newline='') as f:
+    with open('raw_data/departments.csv', newline='') as f:
         reader_dep = csv.reader(f, delimiter=' ', quotechar='|')
         for row in reader_dep:
             print(', '.join(row))
