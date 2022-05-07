@@ -33,6 +33,7 @@ class Book(Resource):
         return jsonify(books)
 
 print('hellouu')
+print('hellouu')
 
 api.add_resource(Main, '/books')
 api.add_resource(Book, '/books/<book_id>')
