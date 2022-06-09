@@ -24,7 +24,9 @@ def load_csv_to_postgres():
 
 
 if __name__ == '__main__':
-    #read_departaments()
+    read_departaments()
     read_jobs()
+    read_hired_employees()
+
 
 
