@@ -1,3 +1,5 @@
 venv
 .env
 database.ini
+.idea
+.DS_Store
