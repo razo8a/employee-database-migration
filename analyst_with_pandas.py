@@ -1,9 +1,9 @@
 import pandas as pd
 
 def read_hired_employees_filter():
-    df_hiredate = pd.read_csv("hird_employees.csv", names=['Id', 'Names', 'Hiredate', 'a', 'b'], index_col='Id')
+    df_hiredate = pd.read_csv("hird_employees.csv", names=['Id', 'Names', 'Hiredate', 'Department_Id', 'Jobs_Id'], index_col='Id')
 
-    df_hiredate = df_hiredate.fillna({'a': 0, 'b': 0})
+#se agregaron nombres a columnas se elimino linea de codigo para llenar espacios vacios
 
     return df_hiredate
 
