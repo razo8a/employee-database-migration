@@ -15,4 +15,51 @@ the postgres database.
 - Rest API 
 - Cron job 
 
+## Setup 
 
+### PostgreSQL
+
+1. Install PostgreSQL in your local machine.
+
+```bash
+brew install postgresql
+```
+
+2. Starting and Stopping the Postgres Service
+```bash
+# to start a postgres connection
+brew services start postgresql
+
+# to stop a postgres connection
+brew services stop postgresql
+```
+
+3. Configure the Postgres Database Server
+```bash
+# Login to postgres admin
+psql postgres
+
+# Add new user and add database creation access permissions
+CREATE ROLE newUser WITH LOGIN PASSWORD "pass";
+ALTER ROLE newUser CREATEDB;
+
+# Quit postgres session and login again with new user
+\q 
+psql postgres -U newuser
+```
+
+4. Create Local Database
+```bash
+# Create database
+CREATE DATABASE mydatabase;
+\l
+```
+
+5. Create database.ini file with credentials in project root folder. Add the following parameters:
+```
+[postgresql]
+host=localhost
+database=mydatabase
+user=newUser
+password=pass
+```
