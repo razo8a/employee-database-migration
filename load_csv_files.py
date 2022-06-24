@@ -1,4 +1,8 @@
 import csv
+import psycopg2
+import os
+import numpy as np
+import pandas as pd
 
 
 def read_departaments():
@@ -21,6 +25,15 @@ def read_jobs():
 
 def load_csv_to_postgres():
     pass
+    # SQL_STATMENT = """
+    #COPY employee FROM STDIN WITH
+    #CSV
+    #HEADER
+    #DELIMITER AS ','
+    #"""
+    #cur = cursor.copy_expert(sql=SQL_STATMENT, file=read_hired_employees())
+    #print('file copy to db')
+
 
 
 if __name__ == '__main__':
