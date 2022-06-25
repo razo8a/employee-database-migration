@@ -14,6 +14,15 @@ the postgres database.
 - Postgres 
 - Rest API 
 - Cron job 
+- AWS
+- Airflow
+- Docker
+- Spark
+- Grafana
+- Superset
+- Terraform
+- Github Actions
+
 
 ## Setup 
 
@@ -63,3 +72,4 @@ database=mydatabase
 user=newUser
 password=pass
 ```
+
