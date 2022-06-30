@@ -73,3 +73,4 @@ user=newUser
 password=pass
 ```
 
+![data_migration_architecture](Asses/data_migration_architecture.png)
