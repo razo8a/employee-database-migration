@@ -1,6 +1,6 @@
 import pandas as pd
 from sqlalchemy import create_engine
-from fastavro import writer, reader, parse_schema
+from fastavro import writer, parse_schema
 
 
 def main():
@@ -29,7 +29,8 @@ def main():
             {'name': 'first_name', 'type': 'string'},
             {'name': 'last_name', 'type': 'string'},
             {'name': 'email', 'type': 'string'},
-            {'name': 'crated_on', 'type': ["null", "int"]}
+            {'name': 'crated_on', 'type': "int",
+             "logicalType": "date"}
         ]
     }
     _parse_schema = parse_schema(schema)
